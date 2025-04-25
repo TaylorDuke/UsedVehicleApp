@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CarSearchApp.Models.UsedVehicle>
+
+<h2>Search Results</h2>
+
+@if (!Model.Any())
+{
+    <p>No vehicles found matching your search criteria.</p>
+}
+else
+{
+    <table style="border-collapse: collapse; width: 100%">
+        <thead>
+            <tr>
+                <th style="border: 1px solid #ddd; padding: 8px;">Make</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Model</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehicle in Model)
+            {
+                <tr>
+                    <td style="border: 1px solid #ddd; padding: 8px;">@vehicle.Make</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">@vehicle.Model</td>
+                    <td style="border: 1px solid #ddd; padding: 8px;">@vehicle.Year</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

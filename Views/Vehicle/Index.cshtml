@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Vehicle Search";
+}
+
+<h2>Search Vehicles</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Make:</label>
+        <input type="text" name="searchMake" placeholder="Enter Make" />
+    </div>
+    <div>
+        <label>Model:</label>
+        <input type="text" name="searchModel" placeholder="Enter Model" />
+    </div>
+    <div>
+        <label>Year:</label>
+        <input type="number" name="searchYear" placeholder="Enter Year" />
+    </div>
+    <div>
+        <label>Use Manual Binding:</label>
+        <input type="checkbox" name="useManualBinding" value="on" />
+    </div>
+    <div>
+        <button type="submit">Search</button>
+    </div>
+</form>
